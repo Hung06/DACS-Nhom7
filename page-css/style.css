@@ -13,6 +13,10 @@ a{
 ul{
     list-style: none;
 }
+.custom{
+    width: 100%;
+    padding: 0 5%;
+}
 .header-web{
     display: flex;
     width: 100%;
@@ -299,15 +303,6 @@ ul{
     padding: 8px 0;
     color: #6C6D70;
     display: block;
-}
-.item-sub-title:before {
-    position: absolute;
-    content: "";
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    left: 0;
-    top: -1px;
 }
 .item-searchs .item-side-size .item-sub-list {
     max-width: unset;
@@ -767,6 +762,7 @@ ul{
     border-radius: 50%;
     max-width: 100%;
     height: auto;
+    border: 1px solid #ccc;
 }
 .favourite {
     cursor: pointer;

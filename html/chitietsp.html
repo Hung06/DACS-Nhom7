@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/page-css/login.css">
-    <link rel="stylesheet" href="/page-css/style.css">
+    <title>Document</title>
     <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/sp.js"></script>
+    <link rel="stylesheet" href="/page-css/style.css">
+    <link rel="stylesheet" href="/page-css/chitietsp.css">
 </head>
 <body>
     <header class="header-web">
@@ -805,7 +805,7 @@
             </div>
             <!-- .item wallet -->
             <div class="item wallet">
-                <a class="icon" href="#" ><i class="fa-solid fa-user"></i></a>
+                <a class="icon" href="/html/index-login.html" id="login"><i class="fa-solid fa-user"></i></a>
             </div>
             <!-- .item wallet -->
             <div class="item item-cart">
@@ -832,55 +832,219 @@
             </div>
         </div>
     </header>
-    <main id="main" class="site-main">
-        <div class="container">
-            <div class="auth">
-                <div class="auth-container">
-                    <div class="auth-row" style="display: flex;flex-wrap: nowrap;">
-                        <div class="auth__login auth__block">
-                            <h3 class="auth__title">Bạn đã có tài khoản IVY</h3>
-                            <div class="auth__login__content">
-                                <p class="auth__description">
-                                    Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!
-                                </p>
-                                <form class="auth__form" method="post" role="login" name="frm_customer_account_email" enctype="application/x-www-form-urlencoded" action autocomplete="off">
-                                    <div class="form-group">
-                                        <input class="form-control" name="customer_account" type="text" placeholder="Email/SĐT" value >
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" name="customer_password" type="text" placeholder="Mật khẩu" >
-                                    </div>
-                                    <div class="auth__form__options">
-                                        <div class="form-checkbox">
-                                            <label>
-                                                <input class="checkboxs" value="1" name="customer_remember" type="checkbox">
-                                                <span style="margin-left: 5px;">Ghi nhớ đăng nhập</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="auth__form__options">
-                                        <a class="auth__form__link" href="#" ><u style=" color: #221f20;font-size: 14px;line-height: 16px;">Quên mật khẩu?</u></a>
-                                        <a class="auth__form__link" href="#" ><u style=" color: #221f20;font-size: 14px;line-height: 16px;" >Đăng nhập bằng OTP</u></a>
-                                    </div>
-                                    <div class="auth__form__buttons">
-                                        <button id="but_login_email" name="but_login_email" class="btn btn--large">Đăng nhập</button>
-                                    </div>     
-                                </form>
+    <div class="main">
+        <div class="sp custom">
+            <div>
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a class="breadcrumb__link" href="">Trang chủ</a></li>
+                    <i class="fa-solid fa-minus"></i>
+                    <li class="breadcrumb__item"><a href="" class="breadcrumb__link" title="Nữ">Nữ</a></li>
+                    <i class="fa-solid fa-minus"></i>
+                    <li class="breadcrumb__item"><a href="" class="breadcrumb__link" title="Crepe Dress - Đầm ôm tạo kiểu ">Crepe Dress - Đầm ôm tạo kiểu </a></li>
+                </ol>
+            </div>
+            <div class="product-detail">
+                <div class="trai rong">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/69e65004e2318b48c1dda6ff59029436.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/834fa268b37c61b186dfee36f073ac33.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/fd389436b49b76867cdc366e296928d9.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/ba4dab8a28064281e0708850e161f0f6.jpg" class="d-block w-100" alt="...">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="sp-doc">
+                        <div class="sp-doc-img" data-slide-to="0">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/69e65004e2318b48c1dda6ff59029436.jpg" alt="">
+                        </div>
+                        <div class="sp-doc-img" data-slide-to="1">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/834fa268b37c61b186dfee36f073ac33.jpg" alt="">
+                        </div>
+                        <div class="sp-doc-img" data-slide-to="2">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/fd389436b49b76867cdc366e296928d9.jpg" alt="">
+                        </div>
+                        <div class="sp-doc-img" data-slide-to="3">
+                            <img src="https://pubcdn.ivymoda.com/files/product/thumab/1600/2023/10/17/ba4dab8a28064281e0708850e161f0f6.jpg" alt="">
+                        </div>
+                    </div>                
+                </div>
+                <div class="phai rong">
+                    <div class="information">
+                        <h1 style="text-transform: uppercase;">Crepe Dress - Đầm ôm tạo kiểu </h1>
+                        <div class="product-detail__sub-info">
+                            <p>
+                                SKU: <span>42B9527</span>
+                            </p>
+                            <div class="product-detail__rating">
+                                <div class="product-detail__rating-wrapper" data-percentage="100">
+                                    <div class="product-detail__rating__background"></div>
+                                    <div class="product-detail__rating__bar" style="width: 100%;"></div>
+                                </div>
+                                <span>(0 đánh giá)</span>
                             </div>
                         </div>
-                        <div class="auth__register auth__block">
-                            <h3 class="auth__title">Khách hàng mới của IVY moda</h3>
-                            <div class="auth__login__content">
-                                <p class="auth__description"> 
-                                     bạn chưa có tài khoản trên ivymoda.com, hãy sử dụng tùy chọn này để truy cập biểu mẫu đăng ký.
-                                </p>
-                                <p class="auth__description">
-                                    Bằng cách cung cấp cho IVY moda thông tin chi tiết của bạn, quá trình mua hàng trên ivymoda.com sẽ là một trải nghiệm thú vị và nhanh chóng hơn!
-                                </p>
-                                <div class="auth__form__buttons">
-                                    <a href="#" style="text-decoration: none; color: #373737;">
-                                        <button class="btn btn--large">Đăng ký</button>
+                        <div class="product-detail__price">
+                            <input type="hidden" name="hid_product_price_not_format" value="1590000">
+                                <b>1.590.000đ</b>
+                        </div>
+                        <div class="product-detail__color">
+                            <p>Màu sắc: Đen</p>
+                            <div class="product-detail__color__input">
+                                <label>
+                                    <input type="radio" name="color" checked="">
+                                    <span>
+                                        <a href="https://ivymoda.com/sanpham/crepe-dress-dam-om-tao-kieu-ms-42b9527-38869">
+                                            <img  src="https://pubcdn.ivymoda.com/ivy2/images/color/049.png" alt="049" style="border-radius: 50%; max-width: 100%;">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="product-detail__size">
+                            <div class="product-detail__size__input">
+                                <label>
+                                    <input type="radio" name="size" value="s" data-quantity="3" data-product-sub-id="189212" data-product-sub-key="4210B95270490022">
+                                    <span class="text-uppercase">s</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="m" data-quantity="4" data-product-sub-id="189214" data-product-sub-key="4220B95270490022">
+                                    <span class="text-uppercase">m</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="l" data-quantity="3" data-product-sub-id="189218" data-product-sub-key="4230B95270490022">
+                                    <span class="text-uppercase">l</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="xl" data-quantity="1" data-product-sub-id="189222" data-product-sub-key="4240B95270490022">
+                                    <span class="text-uppercase">xl</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="size" value="" data-product-sub-id="189225" data-product-sub-key="4250B95270490022">
+                                    <span class="text-uppercase slash">xxl</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="product-detail__quantity">
+                            <p style="font-size: 16px; font-weight: 500; line-height: 1.2; vertical-align: baseline; margin-bottom: 0">Số lượng</p>
+                            <div class="product-detail__quantity-input">
+                                <input type="hidden" name="size_checked" value="m" data-quantity="4">
+                                <input type="hidden" name="product_sub_id" value="189214">
+                                <input type="number" value="1" name="quantity" max="4">
+                                <div class="product-quantity product-detail__quantity--increase">+</div>
+                                <div class="product-quantity product-detail__quantity--decrease">-</div>
+                            </div>
+                        </div>
+                        <div class="product-detail__actions">
+                            <button class="btn btn--large add-to-cart-detail">
+                                Thêm vào giỏ
+                            </button>
+                            <a href="javascript:void(0)" id="purchase">
+                                <button class="btn btn--large btn--outline">
+                                Mua hàng
+                                </button>
+                            </a>
+                            <button class="btn btn--large btn--outline btn--wishlist" data-id="38869">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="product-detail__tab">
+                            <div class="product-detail__tab-header">
+                                <div class="tab-item active">
+                                    <span>GIỚI THIỆU</span>
+                                </div>
+                                <div class="tab-item">
+                                    <span>CHI TIẾT SẢN PHẨM</span>
+                                </div>
+                                <div class="tab-item">  
+                                    <span>BẢO QUẢN</span>
+                                </div>
+                            </div>
+                            <div class="product-detail__tab-body">
+                                <div class="tab-content active hideContent">
+                                    <p>Crepe Dress tự tin thể hiện vẻ đẹp hiện đại và phong cách nổi bật cho người mặc. Đầm là một lựa chọn táo bạo, sành điệu, tôn lên vẻ đẹp cơ thể nhẹ nhàng nhưng vẫn thật gợi cảm.&nbsp;</p>
+                                    <p>Thiết kế cổ chéo&nbsp;kết hợp tay dài giúp tổng thể trang phục trở nên độc đáo, nổi bật. Phần thân dưới được xếp ly cách điệu một bên, thành công mang đến tính trendy, bắt mắt cho thiết kế.</p>
+                                    <p>Bạn có thể mix đầm&nbsp;với giày cao gót, bốt hoặc giày xăng đan tùy vào dịp và phong cách. Bổ sung phụ kiện như vòng cổ, dây chuyền và túi xách để làm nổi bật trang phục.</p>
+                                    <p><strong>Thông tin mẫu:</strong></p>
+                                    <p><strong>Chiều cao:&nbsp;</strong>167 cm</p>
+                                    <p><strong>Cân nặng:&nbsp;</strong>50 kg</p>
+                                    <p><strong>Số đo 3 vòng:&nbsp;</strong>83-65-93 cm</p>
+                                    <p>Mẫu mặc size M</p>
+                                    <p>Lưu ý: Màu sắc sản phẩm thực tế sẽ có sự chênh lệch nhỏ so với ảnh do điều kiện ánh sáng khi chụp và màu sắc hiển thị qua màn hình máy tính/ điện thoại.</p>
+                                </div>
+                                <div class="tab-content hideContent">
+                                    <table class="" width="70%">
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Dòng sản phẩm</b></td>
+                                                <td style="padding-bottom:5px;">You</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Nhóm sản phẩm</b></td>
+                                                <td style="padding-bottom:5px;">Đầm</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Cổ áo</b></td>
+                                                <td style="padding-bottom:5px;">Cổ khác</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Tay áo</b></td>
+                                                <td style="padding-bottom:5px;">Tay dài</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Kiểu dáng</b></td>
+                                                <td style="padding-bottom:5px;">Đầm ôm</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Độ dài</b></td>
+                                                <td style="padding-bottom:5px;">Qua gối</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Họa tiết</b></td>
+                                                <td style="padding-bottom:5px;">Trơn</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-bottom:5px;"><b>Chất liệu</b></td>
+                                                <td style="padding-bottom:5px;">Thun</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-content hideContent">
+                                    <p>Chi tiết bảo quản sản phẩm :&nbsp;</p>
+                                    <p><strong>* Các sản phẩm thuộc dòng cao cấp (Senora) và áo khoác (dạ, tweed,&nbsp;lông, phao) chỉ giặt khô,&nbsp;tuyệt đối không giặt ướt.</strong></p>
+                                    <p>* Vải dệt kim: sau khi giặt sản phẩm phải được phơi ngang tránh bai giãn.</p>
+                                    <p>* Vải voan, lụa, chiffon nên giặt bằng tay.</p>
+                                    <p>* Vải thô, tuytsi, kaki không có phối hay trang trí đá cườm thì có thể giặt máy.</p>
+                                    <p>* Vải thô, tuytsi, kaki có&nbsp;phối màu tương phản hay trang trí voan, lụa, đá cườm thì cần giặt tay.</p>
+                                    <p>* Đồ Jeans nên hạn chế giặt bằng máy giặt vì sẽ làm phai màu jeans. Nếu giặt thì&nbsp;nên lộn trái sản phẩm khi giặt, đóng khuy, kéo khóa, không nên giặt chung cùng đồ sáng màu, tránh dính màu vào các sản phẩm khác.&nbsp;</p>
+                                    <p>* Các sản phẩm cần được giặt ngay không ngâm tránh bị loang màu, phân biệt màu và loại vải để tránh trường hợp vải phai. Không nên giặt sản phẩm với xà phòng có chất tẩy mạnh, nên giặt cùng xà phòng pha loãng.</p>
+                                    <p>* Các sản phẩm có thể&nbsp;giặt bằng máy thì chỉ nên để chế độ giặt nhẹ, vắt mức trung bình và nên phân các loại sản phẩm cùng màu và cùng loại vải khi giặt.</p>
+                                    <p>* Nên phơi sản phẩm tại chỗ thoáng mát, tránh ánh nắng trực tiếp sẽ dễ bị phai bạc màu, nên làm khô quần áo bằng cách phơi ở những điểm gió sẽ giữ màu vải tốt hơn.</p>
+                                    <p>* Những chất vải 100% cotton, không nên phơi sản phẩm bằng mắc áo mà nên vắt ngang sản phẩm lên dây phơi để tránh tình trạng rạn vải.</p>
+                                    <p>* Khi ủi sản phẩm bằng bàn là và sử dụng chế độ hơi nước sẽ làm cho sản phẩm dễ ủi phẳng, mát và không bị cháy, giữ màu sản phẩm được đẹp và bền lâu hơn. Nhiệt độ của bàn là tùy theo từng loại vải.&nbsp;</p>
+                                </div>
+                                <div class="show-more">
+                                    <a>
+                                        <img class="image-down hideImg" src="https://ivymoda.com/assets/images/image-down.png" alt="image down">
+                                        <img class="image-up showImg" src="https://ivymoda.com/assets/images/image-up.png" alt="image down">
                                     </a>
+                                    <div class="inline"></div>
                                 </div>
                             </div>
                         </div>
@@ -888,7 +1052,490 @@
                 </div>
             </div>
         </div>
-    </main>
+        <section class="home-new-prod">
+            <div class="title-section">Sản phẩm tương tự</div>
+            <div class="new-arrival">
+                <div class="sanpham">
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp2-1.jfif" alt="">
+                                <img src="/img/sp2.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size" ><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38803">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/024.png" alt="024" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Chân Váy Midi Dáng Suông</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>1.150.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp3-1.jfif" alt="">
+                                <img src="/img/sp3.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38612">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/056.png" alt="056" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Maddy Dress</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.290.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp4-1.jfif" alt="">
+                                <img src="/img/sp4.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38806">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Phedra Vest - Áo Vest Xếp Chéo</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>1.190.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp5.jfif" alt="">
+                                <img src="/img/sp5-1.jpg" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38634">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="001" class="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38635">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/024.png" alt="024" class="lazy">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38636">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/048.png" alt="048" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Eser Dress - Set Đầm Dạo Phố</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.290.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp1-1.jfif" alt="">
+                                <img src="/img/sp1.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                            <ul>
+                                <li class="checked">
+                                    <a href="javascript:void(0)" class="color-picker" data-id="31099">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="001" class="lazy">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="color-picker" data-id="31100">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" class="lazy">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="color-picker" data-id="35312">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/050.png" alt="050" class="lazy">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Áo sơ mi khuy cách điệu</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.490.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link-product">
+                <a href="https://ivymoda.com/danh-muc/hang-nu-moi-ve" class="all-product">Xem tất cả</a>
+            </div>
+        </section>
+        <section class="home-new-prod">
+            <div class="title-section">Sản phẩm đã xem</div>
+            <div class="new-arrival">
+                <div class="sanpham">
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp2-1.jfif" alt="">
+                                <img src="/img/sp2.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size" ><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38803">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/024.png" alt="024" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Chân Váy Midi Dáng Suông</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>1.150.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp3-1.jfif" alt="">
+                                <img src="/img/sp3.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38612">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/056.png" alt="056" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Maddy Dress</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.290.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp4-1.jfif" alt="">
+                                <img src="/img/sp4.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38806">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Phedra Vest - Áo Vest Xếp Chéo</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>1.190.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp5.jfif" alt="">
+                                <img src="/img/sp5-1.jpg" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38634">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="001" class="lazy">
+                                        </a>
+                                    </li>
+                                    <li class="checked">
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38635">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/024.png" alt="024" class="lazy">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="color-picker" data-id="38636">
+                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/color/048.png" alt="048" class="lazy">
+                                        </a>
+                                    </li>
+                                </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Eser Dress - Set Đầm Dạo Phố</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.290.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sp1">
+                        <div class="imgsp">
+                            <a href="">
+                                <img src="/img/sp1-1.jfif" alt="">
+                                <img src="/img/sp1.jfif" alt="" class="hover-img">
+                            </a>
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>                
+                        <div class="info-product">
+                            <div class="list-color">
+                            <ul>
+                                <li class="checked">
+                                    <a href="javascript:void(0)" class="color-picker" data-id="31099">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="001" class="lazy">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="color-picker" data-id="31100">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" class="lazy">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="color-picker" data-id="35312">
+                                        <img src="https://pubcdn.ivymoda.com/ivy2/images/color/050.png" alt="050" class="lazy">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="favourite" data-id="31099">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            </div>
+                            <h3 class="title-product">
+                                <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Áo sơ mi khuy cách điệu</a>
+                            </h3>
+                            <div class="price-product">
+                                <ins>
+                                    <span>2.490.000đ</span>
+                                </ins>
+                            </div>
+                        </div>
+                        <div class="list-size">
+                            <ul>
+                                <li class="unactive"><button class="btn bt-large">s</button></li>
+                                <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                                <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                                <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                                <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link-product">
+                <a href="https://ivymoda.com/danh-muc/hang-nu-moi-ve" class="all-product">Xem tất cả</a>
+            </div>
+        </section>
+        <div class="img-trending-desktop custom">
+            <img src="https://pubcdn.ivymoda.com/files/news/2023/10/19/9e3e410ed9963aae6e11288e9712c34d.jpg" alt="BANNER TRENDING" class="lazy">
+        </div>
+    </div>
     <div class="site-bottom">
         <div class="footer">
             <div class="main-footer d-flex">
