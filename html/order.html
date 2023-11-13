@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng</title>
+    <script src="/js/sp.js"></script>
+    <link rel="stylesheet" href="/page-css/style.css">
+    <link rel="stylesheet" href="/page-css/order.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+<script>
+    // Lắng nghe sự kiện khi checkbox thay đổi
+    document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.querySelector('input[name="receive_vat"]');
+      const contactInfo = document.querySelector('.ds__item__contact-info');
+
+      checkbox.addEventListener("change", function() {
+        // Nếu checkbox được chọn, hiển thị phần tử .ds__item__contact-info, ngược lại ẩn nó.
+        if (checkbox.checked) {
+          contactInfo.style.display = "block";
+        } else {
+          contactInfo.style.display = "none";
+        }
+      });
+    });
+  </script>    
+</head>
+<body>
+    <header class="header-web">
+        <div class="main-menu">
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li class="nu-newtab">
+                <a href="">Nữ</a>
+                <ul class="sub-menu">
+                    <div class="cat-sub-menu">
+                        <div>
+                            <a href="">NEW ARRIVAL </a>
+                        </div>
+                        <div>
+                            <a href="">IVY YOU</a>
+                        </div>
+                        <div>
+                            <a href="">TENCEL PRODUCTS</a>
+                        </div>
+                        <div>
+                            <a href="">DELICATE URBAN</a>
+                        </div>
+                        <div>
+                            <a href="">REFINED - NEW COLLECTION FW2023</a>
+                        </div>
+                    </div>
+                    <div class="list-submenu d-flex">
+                            <div class="item-list-submenu">
+                            <h3><a href="" style="color:#FF0000">Clearance Sale Upto 80%</a></h3>
+                            <ul>
+                                <li>
+                                    <a href="">Áo</a>
+                                </li>
+                                <li>
+                                    <a href="">Đầm</a>
+                                </li>
+                                <li>
+                                    <a href="">Quần &amp; Jumpsuit</a>
+                                </li>
+                                <li>
+                                    <a href="">Chân váy</a>
+                                </li>
+                                <li>
+                                    <a href="">Đồ lót &amp;  phụ kiện</a>
+                                </li>
+                            </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="">ÁO</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="">Áo sơ mi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo thun</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo kiểu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo croptop</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo peplum</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Áo vest/ blazer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/quan-nu">QUẦN &amp; JUMPSUIT</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/quan-jean-nu">Quần jeans</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/quan-dai-nu">Quần dài</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/quan-lung-short-nu">Quần lửng/ short</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/quan-baggy-nu">Quần baggy</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/jumpsuit">Jumpsuit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/chan-vay-nu">CHÂN VÁY</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/chan-vay">Chân váy</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/chan-vay-xep-ly">Chân váy xếp ly</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/chan-vay-chu-A">Chân váy chữ A</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/dam-nu">ĐẦM</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/dam">Đầm</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/dam-maxi">Đầm maxi/ voan</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/dam-thun-nu">Đầm thun</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/senora-nu">Senora - Đầm dạ hội</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/do-lot">ĐỒ LÓT</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/ao-bra">Áo bra</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-lot">Quần lót</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/phu-kien">PHỤ KIỆN</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/tui-nu">Túi/ ví</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/giay-dep-nu">Giày/dép &amp; Sandals</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/phu-kien-nu">Phụ kiện</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                    </div>
+                    </ul>
+                </li>
+                <li class="nam-newtab">
+                    <a href="https://metagent.vn/" target="_blank">Nam</a>
+                    <ul class="sub-menu">
+                        <div class="cat-sub-menu">
+                            <div>
+                                <a href="https://metagent.vn/" target="_blank">NEW ARRIVALS</a>
+                            </div>
+                        </div>
+                        <div class="list-submenu d-flex">
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/clearance-sale-men-2009" style="color: #FF0000">Clearance Sale Upto 80%</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/clearance-sale-ao-nam-2009">Áo</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/clearance-sale-quan-nam-2009">Quần</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/ao-nam">ÁO</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-thun-nam">Áo thun</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-khoac-nam">Áo khoác Nam</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-polo-nam">Áo polo</a>
+                                        </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-so-mi-nam">Áo sơ mi</a>
+                                        </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-phao-nam">Áo phao</a>
+                                        </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-len-nam">Áo  len</a>
+                                        </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/ao-vest-nam">Áo vest</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/quan-nam">QUẦN NAM</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-jean-nam">Quần jeans</a>
+                                            </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-lung-nam">Quần lửng/short</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-dai-nam">Quần dài</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-khaki-nam">Quần khaki</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/quan-tay-nam">Quần tây</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/giay-dep-nam">GIÀY &amp; DÉP</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/giay-nam">Giày/Dép </a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/phu-kien-nam-dep">PHỤ KIỆN</a></h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ivymoda.com/danh-muc/phu-kien-nam">Phụ kiện</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="treem-newtab">
+                    <a href="">Trẻ em</a>
+                    <ul class="sub-menu">
+                        <div class="cat-sub-menu">
+                            <div>
+                                <a href="https://ivymoda.com/danh-muc/hang-moi-ve-tre-em">NEW ARRIVAL</a>
+                            </div>
+                        </div>
+                        <div class="list-submenu d-flex">
+                                <div class="item-list-submenu">
+                                    <h3><a href="https://ivymoda.com/danh-muc/clearance-sale-kids-2009" style="color: #FF0000">Clearance Sale Upto 80%</a></h3>
+                                        <ul>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/clearance-sale-be-gai-2009">Bé gái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/clearance-sale-be-trai-2009">Bé trai</a>
+                                            </li>
+                                        </ul>
+                                </div>
+                                <div class="item-list-submenu">
+                                    <h3><a href="https://ivymoda.com/danh-muc/be-gai">BÉ GÁI</a></h3>
+                                        <ul>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/ao-be-gai">Áo bé gái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/quan-be-gai">Quần bé gái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/vay-be-gai">Váy bé gái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/Zuyp-be-gai">Chân váy bé gái</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/phu-kien-be-gai">Phụ kiện bé gái</a>
+                                            </li>
+                                        </ul>
+                                </div>
+                                <div class="item-list-submenu">
+                                    <h3><a href="https://ivymoda.com/danh-muc/be-trai">BÉ TRAI</a></h3>
+                                        <ul>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/ao-be-trai">Áo bé trai</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/quan-be-trai">Quần bé trai</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://ivymoda.com/danh-muc/phu-kien-be-trai">Phụ kiện bé trai</a>
+                                            </li>
+                                        </ul>
+                                </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="sale-newtab">
+                    <a href="javascript:void(0)" style="color:#FF0000">SIÊU SALE T9</a>
+                    <ul class="sub-menu">
+                        <div class="cat-sub-menu">
+                        </div>
+                        <div class="list-submenu d-flex">
+                            <div class="item-list-submenu">
+                                <h3><a href="https://ivymoda.com/danh-muc/clearance-sale-upto-80-online-2009" style="color:#FF0000">Clearance Sale Upto 80%</a></h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-30-2009">Sale off 30%</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-50-2009">Sale off 50%</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-70-online-2009">Sale off 70%</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-75-online-2009">Sale off 75%</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-80-online-2009">Sale off 80%</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://ivymoda.com/tin-tuc/tin-chinh">LIFESTYLE</a>
+                </li>
+                <li class="menu-custom">
+                        <a href="javascript:void(0)">Về Chúng Tôi</a>
+                        <ul class="sub-menu-collection sub-menu-about">
+                            <li><a href="https://ivymoda.com/about/gioi-thieu">Về IVY moda</a></li>
+                            <li><a href="https://ivymoda.com/tin-tuc/fashion-show">Fashion Show</a></li>
+                            <li><a href="https://ivymoda.com/tin-tuc/hoat-dong-cong-dong">Hoạt động cộng đồng</a></li>
+                        </ul>
+                </li>
+            </ul>
+            <!-- <div class="sub-mobile-menu">
+                <div class="box-action">
+                    <a href="" class="action-login">Đăng nhập</a>
+                </div>
+            <ul class="menu-mb">
+                <li class="has-child">
+                    <a href="javascript:void(0)">Nữ<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                    <ul class="sub-menu-mb" style="display: none;">
+                        <li>
+                            <a href="">NEW ARRIVAL </a>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/clearance-sale-moda-2009" style="color:#FF0000">Clearance Sale Upto 80%<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                            <li>
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-ao-nu-2009">Áo</a>
+                            </li>
+                            <li>
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-dam-nu-2009">Đầm</a>
+                                </li>
+                            <li>
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-quan-jump-2009">Quần &amp; Jumpsuit</a>
+                                </li>
+                            <li>
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-cv-2009">Chân váy</a>
+                            </li>
+                            <li>
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-dolot-phukien-2009">Đồ lót &amp;  phụ kiện</a>
+                            </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://ivymoda.com/danh-muc/ivy-you">IVY YOU</a>
+                        </li>
+                        <li>
+                            <a href="https://ivymoda.com/danh-muc/tencel">TENCEL PRODUCTS</a>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/ao-nu" target="_blank">ÁO<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-so-mi-nu">Áo sơ mi</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-thun-nu">Áo thun</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-kieu-nu">Áo kiểu</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-croptop">Áo croptop</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-peplum-nu">Áo peplum</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-vest-nu">Áo vest/ blazer</a>
+                                    </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-len-nu">Áo len</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://ivymoda.com/danh-muc/delicate-urban-lookbook-1809">DELICATE URBAN</a>
+                        </li>
+                        <li>
+                            <a href="https://ivymoda.com/danh-muc/look-book-0709">REFINED - NEW COLLECTION FW2023</a>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/quan-nu">QUẦN &amp; JUMPSUIT<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-jean-nu">Quần jeans</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-dai-nu">Quần dài</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-lung-short-nu">Quần lửng/ short</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-baggy-nu">Quần baggy</a>
+                                </li>
+                                <li>
+                                <a href="https://ivymoda.com/danh-muc/jumpsuit">Jumpsuit</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/chan-vay" target="_blank">CHÂN VÁY<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/chan-vay">Chân váy</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/chan-vay-xep-ly">Chân váy xếp ly</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/chan-vay-chu-A">Chân váy chữ A</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/dam-nu" target="_blank">ĐẦM<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/dam">Đầm</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/dam-maxi">Đầm maxi/ voan</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/dam-thun-nu">Đầm thun</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/senora-nu">Senora - Đầm dạ hội</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://beta.ivymoda.com/danh-muc/do-lot-nu" target="_blank">ĐỒ LÓT<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-bra">Áo bra</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-lot">Quần lót</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/phu-kien">PHỤ KIỆN<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                                <ul class="child-sub">
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/tui-nu">Túi/ ví</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/giay-dep-nu">Giày/dép &amp; Sandals</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/phu-kien-nu">Phụ kiện</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://metagent.vn/" target="_blank">Nam<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                    <ul class="sub-menu-mb">
+                        <li>
+                            <a href="https://metagent.vn/" target="_blank">NEW ARRIVALS</a>
+                        </li>
+                        <li class="has-sub-child">
+                                <a href="https://ivymoda.com/danh-muc/clearance-sale-men-2009" style="color: #FF0000">Clearance Sale Upto 80%<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                                <ul class="child-sub">
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-ao-nam-2009">Áo</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/danh-muc/clearance-sale-quan-nam-2009">Quần</a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/ao-nam">ÁO<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-thun-nam">Áo thun</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-khoac-nam">Áo khoác Nam</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-polo-nam">Áo polo</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-so-mi-nam">Áo sơ mi</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-phao-nam">Áo phao</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-len-nam">Áo  len</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-vest-nam">Áo vest</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/quan-nam">QUẦN NAM<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-jean-nam">Quần jeans</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-lung-nam">Quần lửng/short</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-dai-nam">Quần dài</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-khaki-nam">Quần khaki</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-tay-nam">Quần tây</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/giay-dep-nam">GIÀY &amp; DÉP<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/giay-nam">Giày/Dép </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/phu-kien-nam-dep">PHỤ KIỆN<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/phu-kien-nam">Phụ kiện</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                        <a href="javascript:void(0)">Trẻ em<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                        <ul class="sub-menu-mb">
+                        <li>
+                            <a href="https://ivymoda.com/danh-muc/hang-moi-ve-tre-em">NEW ARRIVAL</a>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/clearance-sale-kids-2009" style="color: #FF0000">Clearance Sale Upto 80%<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-be-gai-2009">Bé gái</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-be-trai-2009">Bé trai</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/be-gai">BÉ GÁI<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-be-gai">Áo bé gái</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-be-gai">Quần bé gái</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/vay-be-gai">Váy bé gái</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/Zuyp-be-gai">Chân váy bé gái</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/phu-kien-be-gai">Phụ kiện bé gái</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/be-trai">BÉ TRAI<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/ao-be-trai">Áo bé trai</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/quan-be-trai">Quần bé trai</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/phu-kien-be-trai">Phụ kiện bé trai</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="javascript:void(0)" style="color:#FF0000">SIÊU SALE T9<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                    <ul class="sub-menu-mb">
+                        <li class="has-sub-child">
+                            <a href="https://ivymoda.com/danh-muc/clearance-sale-upto-80-online-2009" style="color:#FF0000">Clearance Sale Upto 80%<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                            <ul class="child-sub">
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-30-2009">Sale off 30%</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-50-2009">Sale off 50%</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-70-online-2009">Sale off 70%</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-75-online-2009">Sale off 75%</a>
+                                </li>
+                                <li>
+                                    <a href="https://ivymoda.com/danh-muc/clearance-sale-80-online-2009">Sale off 80%</a>
+                                </li>
+                            </ul>   
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                        <a href="javascript:void(0)">Bộ sưu tập<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                        <ul class="sub-menu-mb">
+                            <li class="has-sub-child">
+                                <a href="javascript:void(0)">Nữ<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                                <ul class="child-sub">
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/the-cygnus-154">THE CYGNUS</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/soft-subtle-155">SOFT &amp; SUBTLE</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/refined-new-collection-fw2023-156">REFINED - NEW COLLECTION FW2023</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/a-symphony-of-elegance-153">A SYMPHONY OF ELEGANCE</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/moments-of-delight-152">MOMENTS OF DELIGHT</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/summer-scent-151">SUMMER SCENT</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/enchanted-150">ENCHANTED</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/scent-of-the-sea-149">SCENT OF THE SEA</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/harmony-148">HARMONY</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/bloomtime-147">BLOOMTIME</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/discover-charming-138">DISCOVER CHARMING</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/timeless-143">TIMELESS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub-child">
+                                <a href="javascript:void(0)">Nam<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                                <ul class="child-sub">
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/delicate-urban-dau-an-rieng-cua-nhung-quy-co-thanh-thi-157">DELICATE URBAN: DẤU ẤN RIÊNG CỦA NHỮNG QUÝ CÔ THÀNH THỊ </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/new-polo-for-men-120">NEW POLO FOR MEN</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ivymoda.com/lookbook/nature-soft-113">NATURE SOFT</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-sub-child">
+                                <a href="javascript:void(0)">Trẻ em<span class="arrows"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                                <ul class="child-sub">
+                                <li>
+                                        <a href="https://ivymoda.com/lookbook/organic-cotton-142">ORGANIC COTTON </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="https://ivymoda.com/tin-tuc/tin-chinh">LIFESTYLE</a>
+                </li>
+                <li class="has-child">
+                    <a href="javascript:void(0)">Về Chúng Tôi<span class="arrow"><i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></span></a>
+                    <ul class="sub-menu-mb">
+                        <li><a href="https://ivymoda.com/about/gioi-thieu">Về IVY moda</a></li>
+                        <li><a href="https://ivymoda.com/">Fashion Show</a></li>
+                        <li><a href="https://ivymoda.com/">Hoạt động cộng đồng</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="close-menu"><i class="fa-solid fa-xmark"></i></div>
+            </div> -->
+        </div>
+        <div class="logo">
+            <a href="">
+                <img src="/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="right-header">
+            <form class="search-form" enctype="application/x-www-form-urlencoded" method="get" action="" name="frm_search">
+                <button class="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input id="search-quick" type="text" name="q" placeholder="TÌM KIẾM SẢN PHẨM" autocomplete="off" minlength="1">
+                <div class="quick-search">
+                    <div class="item-searchs">
+                        <h4>Tìm kiếm nhiều nhất</h4>
+                        <div class="item-side-size">
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Đầm</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">trễ vai</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Áo khoác</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Quần</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Áo sơ mi</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Vest</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">parka</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">tweed</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">croptop</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">Chân váy</a>
+                            </label>
+                                <label class="item-sub-list po-relative mb-2">
+                                <a href="" class="item-sub-title">lông cừu</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="header-actions">
+                <!-- .item wallet -->
+            <div class="item wallet it1">
+                <a class="icon hp" href="#"><i class="fa-solid fa-headphones"></i></i></a>
+                <div class="sub-action sub-action1">
+                    <div class="top-action">
+                        <h3>Trợ giúp</h3>
+                    </div>
+                    <ul>
+                        <li><a href="tel:02466623434"><i class="fa-solid fa-phone"></i>Hotline</a></li>
+                        <li><a href="javascript:openCsChatBox();"><i class="fa-regular fa-comment"></i>Live Chat</a></li>
+                        <li><a href="" target="_blank"><i class="fa-solid fa-rotate"></i>Messenger</a></li>
+                        <li><a href="mailto:saleadmin@ivy.com.vn"><i class="fa-regular fa-envelope"></i>Email</a></li>
+                        <li><a href=""><i class="fa-solid fa-truck-fast"></i>Tra cứu đơn hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- .item wallet -->
+            <div class="item wallet">
+                <a class="icon" href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+            <!-- .item wallet -->
+            <div class="item item-cart">
+                <a class="icon" href="#"><i class="fa-solid fa-bag-shopping"></i>
+                    <span class="number-cart">0</span>
+                </a>
+                <div class="sub-action sub-action-cart">
+                    <div class="top-action">
+                        <h3>Giỏ hàng <span class="number-cart">0</span></h3>
+                    </div>
+                    <div class="main-action"></div>
+                    <div class="bottom-action">
+                        <input type="hidden" name="total_price_not_format" value="0">
+                        <div class="total-price">Tổng cộng: <strong>0đ</strong></div>
+                        <div class="box-action">
+                            <a href="" class="action-view-cart" style="display: none;">Xem giỏ hàng</a>
+                            <a href="" class="action-login">Đăng nhập</a>
+                        </div>
+                    </div>
+                    <div class="action-close"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+            </div>
+            <!-- .item wallet -->
+            </div>
+        </div>
+    </header>
+    <!-- <section id="Slider">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></button>
+              </div>
+            <div class="carousel-inner" >
+              <div class="carousel-item active">
+                <img src="/img/slide1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/slide2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/slide3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+          </div>
+          <div style="background-image: url(/Buoi14/img/e4a404283b3824c211c1549aedd28d5f_xhdpi.png);"></div>
+    </section>
+    <section class="cartegory">
+        <div class="container">
+            <div class="sp1">
+                <div class="imgsp">
+                    <a href="">
+                        <img src="/img/sp1-1.jfif" alt="">
+                        <img src="/img/sp1.jfif" alt="" class="hover-img">
+                    </a>
+                </div>
+                <div class="add-to-cart">
+                    <a href="javascript:void(0)" id="toggle-list-size"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>                
+                <div class="info-product">
+                    <div class="list-color">
+                    <ul>
+                        <li class="checked">
+                            <a href="javascript:void(0)" class="color-picker" data-id="31099">
+                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/001.png" alt="001" class="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="color-picker" data-id="31100">
+                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/004.png" alt="004" class="lazy">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="color-picker" data-id="35312">
+                                <img src="https://pubcdn.ivymoda.com/ivy2/images/color/050.png" alt="050" class="lazy">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="favourite" data-id="31099">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    </div>
+                    <h3 class="title-product">
+                        <a href="https://ivymoda.com/sanpham/ao-so-mi-khuy-cach-dieu-ms-17m7036-31099">Áo sơ mi khuy cách điệu</a>
+                    </h3>
+                    <div class="price-product">
+                        <ins>
+                            <span>1.190.000đ</span>
+                        </ins>
+                    </div>
+                </div>
+                <div class="list-size">
+                    <ul>
+                        <li class="unactive"><button class="btn bt-large">s</button></li>
+                        <li data-product-sub-id="161141"><button class="btn bt-large">m</button></li>
+                        <li data-product-sub-id="161143"><button class="btn bt-large">l</button></li>
+                        <li data-product-sub-id="161145"><button class="btn bt-large">xl</button></li>
+                        <li data-product-sub-id="161147"><button class="btn bt-large">xxl</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <main id="main" class="site-main">
+        <div class="container">
+            <div class="cart pt-40 checkout">
+                <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="row">
+                        <div class="col-lg-8 col-2xl-9">
+
+                            <!-- ************************CHECKOUT-PROCESS-BAR********************** -->
+                            <div class="checkout-process-bar block-border">
+                                <ul>
+                                    <li class="active">
+                                        <span>Giỏ hàng</span>
+                                    </li>
+                                    <li class="active">
+                                        <span>Đặt hàng</span>
+                                    </li>
+                                    <li class="">
+                                        <span>Thanh toán</span>
+                                    </li>
+                                    <li>
+                                        <span>Hoàn thành đơn</span>
+                                    </li>
+                                </ul>
+                                <p class="checkout-process-bar__title">Giỏ hàng</p>
+                            </div>
+
+                            <!-- *********************CHECKOUT-ADDRESS-DELIVERY******************** -->
+                            <div class="checkout-address-delivery" style="margin-top: 32px;">
+                                <div class="row">
+                                    <div class="col-12 col-2xl-7 pb-3">
+                                        <h3 class="checkout-title" style="margin-bottom: 18px;">
+                                            Địa chỉ giao hàng
+                                        </h3>
+                                        <input type="hidden" id="user-bt" name="buy_type" value="guest" checked>
+                                        <div class="buttons">
+                                            <a class="btn btn--large" href="">
+                                                Đăng nhập
+                                            </a>
+                                            <a class="btn btn--large btn--outline" href="">
+                                                Đăng ký
+                                            </a>
+                                        </div>
+                                        <p>Đăng nhập/ Đăng ký tài khoản để được tích điểm và nhận thêm nhiều ưu đãi từ IVY moda.</p>
+                                        <label class="ds__item">
+                                            <input class="ds__item__input" type="radio" name="guset" checked>
+                                            <span class="ds__item__label">
+                                                Địa chỉ
+                                            </span>
+                                            <div class="ds__item__contact-info">
+                                                <div class="row">
+                                                    <div class="col-6 form-group">
+                                                        <input class="form-control" type="text" value="" name="customer-display-name" placeholder="Họ tên">
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                         <input class="form-control" type="text" value="" name="customer-display-name" placeholder="Số điện thoại">
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <select class="form-control" name="customer_region_id" id="register_region_id">
+                                                            <option selected disabled value="-1">Tỉnh/Thành phố</option>
+                                                            <option value="511">Hà Nội</option>
+                                                            <option value="507">Hồ Chí Minh</option>
+                                                            <option value="512">Hải Phòng</option>
+                                                            <option value="499">Đà Nẵng</option>
+                                                            <option value="485">An Giang</option>
+                                                            <option value="486">Bình Dương</option>
+                                                            <option value="587">Bắc Giang</option>
+                                                            <option value="588">Bình Định</option>
+                                                            <option value="490">Bạc Liêu</option>
+                                                            <option value="491">Bắc Ninh</option>
+                                                            <option value="492">Bình Phước</option>
+                                                            <option value="494">Bình Thuận</option>
+                                                            <option value="495">Bến Tre</option>
+                                                            <option value="496">Cao Bằng</option>
+                                                            <option value="497">Cà Mau</option>
+                                                            <option value="498">Cần Thơ</option>
+                                                            <option value="500">Điện Biên</option>
+                                                            <option value="502">Đồng Nai</option>
+                                                            <option value="504">Đồng Tháp</option>
+                                                            <option value="505">Gia Lai</option>
+                                                            <option value="506">Hòa Bình</option>
+                                                            <option value="508">Hải Dương</option>
+                                                            <option value="509">Hà Giang</option>
+                                                            <option value="510">Hà Nam</option>
+                                                            <option value="513">Hà Tĩnh</option>
+                                                            <option value="514">Hậu Giang</option>
+                                                            <option value="515">Hưng Yên</option>
+                                                            <option value="516">Kiên Giang</option>
+                                                            <option value="517">Khánh Hòa</option>
+                                                            <option value="518">Kon Tum</option>
+                                                            <option value="519">Long An</option>
+                                                            <option value="520">Lâm Đồng</option>
+                                                            <option value="521">Lai Châu</option>
+                                                            <option value="522">Lào Cai</option>
+                                                            <option value="523">Lạng Sơn</option>
+                                                            <option value="524">Nghệ An</option>
+                                                            <option value="525">Ninh Bình</option>
+                                                            <option value="526">Nam Định</option>
+                                                            <option value="527">Ninh Thuận</option>
+                                                            <option value="528">Phú Thọ</option>
+                                                            <option value="529">Phú Yên</option>
+                                                            <option value="530">Quảng Bình</option>
+                                                            <option value="531">Quảng Ngãi</option>
+                                                            <option value="532">Quảng Nam</option>
+                                                            <option value="533">Quảng Ninh</option>
+                                                            <option value="534">Quảng Trị</option>
+                                                            <option value="535">Sơn La</option>
+                                                            <option value="536">Sóc Trăng</option>
+                                                            <option value="537">Thái Bình</option>
+                                                            <option value="538">Tiền Giang</option>
+                                                            <option value="539">Thanh Hóa</option>
+                                                            <option value="540">Tây Ninh</option>
+                                                            <option value="541">Tuyên Quang</option>
+                                                            <option value="543">Trà Vinh</option>
+                                                            <option value="544">Thái Nguyên</option>
+                                                            <option value="545">Vĩnh Long</option>
+                                                            <option value="546">Vĩnh Phúc</option>
+                                                            <option value="547">Yên Bái</option>
+                                                            <option value="548">Đắk Nông</option>
+                                                            <option value="549">Bắc Kạn</option>
+                                                            <option value="550">Thừa Thiên - Huế</option>
+                                                            <option value="551">Đắk Lắk</option>
+                                                            <option value="552">Bà Rịa - Vũng Tàu</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6 form-group">
+                                                        <select class="form-control" name="vnward_id" id="vnward_id">
+                                                            <option selected disabled value="-1">Quận/Huyện</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <select class="form-control" name="customer_city_id" id="register_citt_id">
+                                                            <option selected disabled value="-1">Phường xã</option>
+                                                            <option value="12020">Cổ Nhuế</option>
+                                                            <option value="12021">Xuân Đỉnh</option>
+                                                            <option value="12022">Đại Mỗ</option>
+                                                            <option value="12023">Mỹ Đình</option>
+                                                            <option value="12024">Mễ Trì</option>
+                                                            <option value="12025">Cầu Diễn</option>
+                                                            <option value="12026">Đông Ngạc</option>
+                                                            <option value="12027">Nghĩa Đô</option>
+                                                            <option value="12028">Chèm</option>
+                                                            <option value="12029">Phú Diễn</option>
+                                                            <option value="12030">Mai Dịch</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 form-group">
+                                                        <input class="form-control" type="text" placeholder="Địa chỉ" name="customer_address2" value="">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-12 col-2xl-5">
+                                        <h3 class="checkout-title" >Phương thức giao hàng</h3>
+                                        <div class="block-border">
+                                            <!-- hien tai chi lam phuong thuc giao nhanh -->
+                                            <label class="ds__item">
+                                                <input id="shipping_method_1" class="ds__item__input" type="radio" name="shipping_method" value="1" checked>
+                                                <span class="ds__item__label">
+                                                    Chuyển phát nhanh
+                                                    <span class="delivery-time"></span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="pt-4">
+                                            <h3 class="checkout-title" >
+                                                Bạn có muốn nhận hoá đơn VAT không ?
+                                                <div class="form-check form-switch d-inline-block">
+                                                    <input type="checkbox" class="form-check-input" name="receive_vat">
+                                                </div>
+                                            </h3>
+                                            <div class="ds__item__contact-info pt-0 order_vat_form d-block">
+                                                <div class="form-group">
+                                                    <input type="text" id="emailInput" name="order_vat_email" class="form-control" placeholder="Nhập email" value>
+                                                    <span id="email-error" style="color: red;"></span>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <input type="text" name="order_vat_company_name" class="form-control" placeholder="Nhập tên doanh nghiệp" value>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <input type="text" name="order_vat_tax_code" class="form-control" placeholder="Nhập mã số thuế" value>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <input type="text" name="order_vat_address" class="form-control" placeholder="Nhập địa chỉ" value>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- **************************CHECKOUT-PAYMENT************************ -->
+                            <div class="checkout-payment">
+                                <h3 class="checkout-title">Phương thức thanh toán</h3>
+                                <div class="block-border">
+                                    <p>Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.</p>
+                                    <div class="checkout-payment__options">
+                                        <label class="ds__item">
+                                            <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_1" value="1">
+                                            <span class="ds__item__label">
+                                                Thanh toán bằng thẻ tín dụng                                                                                 
+                                            </span>
+                                            <span style="margin-left: 3px;">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/1.png" class="">
+                                            </span>
+                                        </label>
+                                        <label class="ds__item">
+                                            <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_2" value="2">
+                                            <span class="ds__item__label">
+                                                Thanh toán bằng thẻ ATM 
+                                                <span>Hỗ trợ thanh toán online hơn 38 ngân hàng phổ biến Việt Nam.</span>                                                      
+                                            </span>
+                                        </label>
+                                        <label class="ds__item">
+                                            <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_5" value="5">
+                                            <span class="ds__item__label">                             
+                                                Thanh toán bằng Momo                                                                                                            
+                                            </span>
+                                        </label>
+                                        <label class="ds__item">
+                                            <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_3" value="3" checked>
+                                            <span class="ds__item__label">                                                  
+                                                Thanh toán khi giao hàng                                                                                                                                                               
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ********************VIEW-MORE-PRODUCT******************** -->
+                            <div class="view-more-product">
+                                <span class="btn btn--large">
+                                    Hiển thị sản phẩm
+                                </span>
+                            </div>
+
+                            <!-- ********************CHECKOUT-MY-CART***************** -->
+                            <div class="checkout-my-cart" style="display: block;">
+                                <div class="cart__list">
+                                    <h2 class="cart-title">Giỏ hàng của bạn</h2>
+                                    <table class="cart__table">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên Sản phẩm</th>
+                                                <th>Chiết khấu</th>
+                                                <th>Số lượng</th>
+                                                <th>Tổng tiền</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="cart__product-item">
+                                                        <div class="cart__product-item__img">
+                                                            <a href="" >
+                                                                <img src="https://pubcdn.ivymoda.com/files/product/thumab/400/2023/10/24/e7422a3437216446ba345c165a232668.jpg" alt="Crepe Dress - Đầm ôm tạo kiểu" >
+                                                            </a>
+                                                        </div>
+                                                        <div class="cart__product-item__content">
+                                                            <a href="">
+                                                                <h3 class="cart__product-item__title" >
+                                                                    Crepe Dress - Đầm ôm tạo kiểu
+                                                                </h3>
+                                                            </a>
+                                                            <div class="cart__product-item__properties">
+                                                                <p>
+                                                                    Màu sắc: 
+                                                                    <span>Đen</span>
+                                                                </p>
+                                                                <p>
+                                                                   Size:
+                                                                   <span>M</span> 
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="cart-sale-price"> 
+                                                    <p>-150.000đ</p>
+                                                    <p class="cart-sale_item">
+                                                        (-9.43%)
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <div class="product-detail__quantity-input">
+                                                        <input type="number" value="1" disabled readonly>
+                                                    </div>
+                                                </td>
+                                                <td> 
+                                                    <div class="cart__product-item__price">
+                                                        1.440.000đ
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ------------------------------------------------------------------------------------ -->
+                        <div class="col-lg-4 col-2xl-3 cart-page__col-summary">
+
+                            <!-- *************CART-SUMMARY************ -->
+                            <div class="cart-summary">
+                                <div class="box-product-total">
+                                    <div class="cart-summary__overview">
+                                        <h3 style="font-size: 22px;">Tóm tắt đơn hàng</h3>
+                                        <div class="cart-summary__overview__item">
+                                            <p>Tổng tiền hàng</p>
+                                            <p>1.590.000đ</p>
+                                        </div>  
+                                        <div class="cart-summary__overview__item">
+                                            <p>Tạm tính</p>
+                                            <p>1.440.000đ</p>
+                                        </div> 
+                                        <div class="cart-summary__overview__item">
+                                            <p>Phí vận chuyển</p>
+                                            <p>38.000đ</p>
+                                        </div> 
+                                        <div class="cart-summary__overview__item">
+                                            <p>Tiền thanh toán</p>
+                                            <p><b>1.478.000đ</b>></p>
+                                        </div> 
+                                        <div class="d-none">
+                                            <div class="list-item-info">
+                                                <p id="item-id">189214</p>
+                                                <p id="item-name">Crepe Dress - Đầm ôm tạo kiểu</p>
+                                                <p id="item-price">1590000</p>
+                                                <p id="item-discount">150000</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-summary__voucher-form">
+                                    <div class="cart-summary__voucher-form__title">
+                                        <h4 class="active">Mã phiếu giảm giá</h4>
+                                        <span> </span>
+                                        <h4 data-toggle="modal" data-target="#myVoucherWallet">Mã của tôi</h4>
+                                        <div class="modal fade voucher-wallet" id="myVoucherWallet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="exampleModalLabel">Danh sách mã Voucher</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">x</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Rất tiếc, bạn không còn mã giảm giá nào !</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="" id="p_coupon" style="padding-top: 5px; display: none; text-align: center"></p>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Mã giảm giá" name="coupon_code_text" id="coupon_code_text" value="">
+                                        <button type="button" class="btn btn--large btn--outline" id="coupon_code_text" >Áp dụng</button>
+                                        <button type="button" class="btn btn--large" id="but_coupon_delete" style="display: none;">Bỏ Mã</button>
+                                    </div>
+                                    <div class="form-group select-account-code">
+                                        <select class="form-control select2-hidden-accessible" data-type="account_code_add"  name="order_account_code" id="order_account_code" data-select2-id="select2-data-order_account_code" tabindex="-1" aria-hidden="true" >
+                                            <option value="" data-select2-id="select2-data-2-w1j2"></option>
+                                            <option value="b139" data-select2-id="select2-data-8-d1d1">b139</option>
+                                            <option value="d020" data-select2-id="select2-data-9-9nfl">d020</option>
+                                            <option value="d021" data-select2-id="select2-data-9-9nfl">d021</option>
+                                            <option value="d022" data-select2-id="select2-data-9-9nfl">d022</option>
+                                            <option value="d023" data-select2-id="select2-data-9-9nfl">d023</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" data-select2-id="select2-data-1-2ws6" style="width: 34px;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-order_account_code-container" aria-controls="select2-order_account_code-container">
+                                                    <span class="select2-selection__rendered" id="select2-order_account_code-container" role="textbox" aria-readonly="true" title="Mã nhân viên hỗ trợ">
+                                                        <span class="select2-selection__placeholder">
+                                                            Mã nhân viên hỗ trợ
+                                                        </span>
+                                                    </span>
+                                                    <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- ************************* CART-SUMMARy__BUTTON ********************** -->
+                            <div class="cart-summary__button">
+                                <button type="button" id="customButton" name="btn_continue_step2" class="btn btn--large" value="Thanh toán và giao hàng">
+                                    Hoàn thành    
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-otp-order">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelector('#customButton').addEventListener('click', function() {
+        const emailInput = document.querySelector('#emailInput');
+        const emailValue = emailInput.value;
+        const emailError = document.querySelector('#email-error');
+
+        if (emailValue.endsWith('@gmail.com')) {
+            emailError.textContent = ''; 
+            
+        } else {
+            emailError.textContent = 'Vui lòng sử dụng địa chỉ email có đuôi @gmail.com.';
+        }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.register{
+    margin-top: 80px; 
+    border-bottom: 1px solid #D1D2D4; 
+    
+    
+}
+.container{
+    padding-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%; 
+    border-top: 1px solid #D1D2D4;
+    
+}
+/* tiêu đề */
+.tieude{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tieude h3{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #221f20;
+}
+.chu1{
+    text-transform: uppercase;
+}
+/* thông tin */
+.thongtindangky{
+    padding: 10px 0 10px 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.chu2 h4{
+    margin-bottom: 10px;
+    color: #221f20;
+}
+h4{
+    font-size: 16px;
+}
+/* khung */
+.khung{
+    margin-left: 5px;
+    margin-bottom: 1rem;
+    color: #6C6D70;
+    font-family: 'Montserrat';
+    max-width: 100%;
+}
+/* input */
+.form-control {
+    height: 48px;
+    background: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Montserrat";
+    outline: none;
+    transition: none;
+}
+/* select  */
+select.form-control {
+    appearance: none;
+    background-image: url(/img/arrow_down.png);
+    background-size: 16px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: center;
+    background-repeat: no-repeat;
+    padding: 0px 16px;
+}
+
+textarea.form-control {
+    height: 80px;
+}
+textarea.form-control {
+    resize: none;
+    padding: 16px;
+}
+
+.img_capcha {
+    border: 1px solid #E7E8E9;
+    margin-top: 15px;
+    padding: 5px 10px;
+    line-height: 0;
+    display: inline-block;
+    margin-left: 5px;
+}
+.khung1{
+    margin-left: 5px;
+    display: block;
+    min-height: 1.5rem;
+    position: relative;
+    margin-bottom: 0.125rem;
+}
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+
+.btn--large {
+    padding: 12px 24px;
+    border-radius: 16px 0px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #221f20;
+    color: #f7f8f9;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+.btn {
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    font-weight: 400;
+}
+.btn:hover{
+    background-color: #F7F8F9;
+}
