@@ -1237,3 +1237,118 @@ section{
 ol, ul {
     padding-left: 0;
 }
+/* cart -main action */
+.main-action {
+    max-height: calc( 100vh - 75px - 240px );
+    overflow-y: auto;
+    height: 100%;
+}
+
+.main-action {
+    padding: 0 24px;
+}
+.item-product-cart {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #F6F7F8;
+}
+.item-product-cart:last-child {
+    margin-bottom: 0;
+}
+.thumb-product-cart {
+    width: 64px;
+}
+.thumb-product-cart img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.info-product-cart {
+    width: calc( 100% - 64px );
+    padding-left: 12px;
+    display: flex;
+    flex-flow: column;
+}
+.sub-action-cart .info-product-cart h3 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3E3E3F;
+    margin-bottom: 8px;
+}
+.info-properties {
+    margin-bottom: 12px;
+}
+.info-properties p strong {
+    font-weight: normal;
+}
+
+.properties-color strong {
+    color: #221F20;
+}
+.info-properties p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 0;
+}
+.info-properties p:last-child {
+    margin-right: 0;
+}
+.info-price-mini {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.info-price-quantity {
+    position: relative;
+    width: max-content;
+    padding: 0 12px;
+}
+.price-quantity {
+    top: 0;
+    background: #FFFFFF;
+    border: 1px solid #E7E8E9;
+    border-radius: 8px 0px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.price-quantity-minus {
+    left: 0;
+}
+.info-price-quantity input {
+    font-weight: normal;
+    font-size: 14px !important;
+    line-height: 16px;
+    height: 24px;
+    padding: 4px 0 !important;
+    width: 48px;
+    text-align: center;
+}
+input[type=text], input[type=email], input[type=tel], input[type=password], input[type=number], input[type=search], textarea {
+    border: 1px solid #E7E8E9;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 14px;
+    color: #57585A;
+    font-family: 'Montserrat', sans-serif;
+}
+.price-quantity-plus {
+    right: 0;
+}
+.price-cart-mini ins {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    color: #AC2F33;
+    margin-top: 4px;
+}
+.info-product-cart a {
+    color: #373737;
+}

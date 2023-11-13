@@ -43,20 +43,20 @@ $(document).on('click', function (e) {
 
 // Chon size trang san pham
 $(document).ready(function() {
-    $('.fa-plus').on('click', function() {
+    $('.cong').on('click', function() {
         // Ẩn biểu tượng fa-plus
         $(this).hide();
         // Hiển thị biểu tượng fa-minus
-        $(this).siblings('.fa-minus').show();
+        $(this).siblings('.tru').show();
         // Hiển thị div có class "sub-list-side" với hiệu ứng
         $(this).closest('.item-side').find('.sub-list-side').slideDown('fast');
     });
 
-    $('.fa-minus').on('click', function() {
+    $('.tru').on('click', function() {
         // Ẩn biểu tượng fa-minus
         $(this).hide();
         // Hiển thị biểu tượng fa-plus
-        $(this).siblings('.fa-plus').show();
+        $(this).siblings('.cong').show();
         // Ẩn div có class "sub-list-side" với hiệu ứng
         $(this).closest('.item-side').find('.sub-list-side').slideUp('fast');
     });
@@ -151,12 +151,10 @@ $(document).ready(function() {
     });
 });
 
-// số lượng sản phẩm 
 $(document).ready(function() {
     var quantityInput = $("input[name='quantity']");
     var increaseButton = $(".product-detail__quantity--increase");
     var decreaseButton = $(".product-detail__quantity--decrease");
-
     increaseButton.on("click", function() {
         var currentValue = parseInt(quantityInput.val());
         var maxQuantity = parseInt(quantityInput.attr("max"));
@@ -164,11 +162,24 @@ $(document).ready(function() {
             quantityInput.val(currentValue + 1);
         }
     });
-
     decreaseButton.on("click", function() {
         var currentValue = parseInt(quantityInput.val());
         if (currentValue > 1) {
             quantityInput.val(currentValue - 1);
+        }
+    });
+    var additionalQuantityInput = $("input[data-product-sub-id='189273']");
+    var additionalIncreaseButton = $(".price-quantity-plus");
+    var additionalDecreaseButton = $(".price-quantity-minus");
+
+    additionalIncreaseButton.on("click", function() {
+        var currentValue = parseInt(additionalQuantityInput.val());
+        additionalQuantityInput.val(currentValue + 1);
+    });
+    additionalDecreaseButton.on("click", function() {
+        var currentValue = parseInt(additionalQuantityInput.val());
+        if (currentValue > 1) {
+            additionalQuantityInput.val(currentValue - 1);
         }
     });
 });
@@ -200,7 +211,7 @@ $(document).ready(function() {
     });
 });
 
-
+// Số lượng
 
 
 
